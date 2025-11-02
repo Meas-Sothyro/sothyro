@@ -3,7 +3,7 @@
 <head>
   <!-- ===== Basic SEO ===== -->
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>Sothyro Meas — Portfolio</title>
   <meta name="description" content="Hi, I'm Sothyro Meas — a full‑stack developer building AI, security, and education tech projects." />
 
@@ -25,6 +25,7 @@
 
   <!-- ===== Styles (single file, easy for GitHub Pages) ===== -->
   <style>
+    
     :root {
       --bg: #0b1020;
       --bg-soft: #0e152b;
@@ -44,6 +45,7 @@
               radial-gradient(900px 500px at -10% 10%, rgba(155,140,255,0.12), transparent 60%),
               var(--bg);
       line-height: 1.6;
+      overflow-x: hidden;
     }
     a { color: inherit; text-decoration: none }
     img { max-width: 100%; display: block }
@@ -85,9 +87,21 @@
     }
     @media (max-width: 600px) {
     .container {
-        margin-left: 20px;
+        margin-right: 200px;
         }
     }
+
+    @media (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr;
+    padding: 40px 0;  /* Adjust hero padding for smaller screens */
+  }
+}
+
 /* Default navigation bar styling for larger screens */
 .nav .links {
   display: flex; /* Display links on larger screens */
@@ -125,6 +139,10 @@
   .links.open {
     display: flex;
   }
+}
+
+.hero .headline, .hero .sub {
+  word-wrap: break-word;
 }
 
 
@@ -181,7 +199,7 @@
       .links.open{display:flex}
       .hero{padding:56px 0 28px}
       .cta .btn{width:100%; justify-content:center}
-      .avatar{width:100%; height:auto}
+      .avatar{width:100%; height:auto; padding-right: 20px; padding-left: 20px; border-radius: 33px; border:1px solid var(--border); }
       footer .footer-grid{flex-direction:column; align-items:flex-start}
     }
 
@@ -211,7 +229,7 @@
   <!-- ===== Hero ===== -->
   <main id="top" class="container hero">
     <div class="hero-inner">
-      <div>
+      <div class="container">
         <span class="tag" aria-hidden="true">🚀 Full‑Stack • AI • Security</span>
         <h1 class="headline">Hi, I'm <span style="background:linear-gradient(135deg,var(--brand),var(--brand-2));-webkit-background-clip:text;background-clip:text;color:transparent">Sothyro</span> — I build useful software for people.</h1>
         <p class="sub">I work across React/Next.js, Flask/Python, and cloud tooling. I love turning complex ideas into simple, reliable products — from AI‑powered education tools to secure web platforms.</p>
