@@ -39,6 +39,7 @@
     }
     body {
   overflow-x: hidden; /* Prevent horizontal scrolling */
+  padding-top:60px;
 }
 
 html, body {
@@ -46,7 +47,7 @@ html, body {
   overflow-x: hidden; /* Ensure no horizontal scroll */
 }
     * { box-sizing: border-box }
-    html { scroll-behavior: smooth }
+    html { scroll-behavior: smooth; scroll-padding-top: 60px; }
     body {
       margin: 0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; 
       color: var(--text); background: radial-gradient(1200px 600px at 80% -10%, rgba(106,166,255,0.15), transparent 60%),
@@ -59,11 +60,18 @@ html, body {
     img { max-width: 100%; display: block }
     .container { width: 100%; max-width: 1100px; padding: 0 20px; margin: 0 auto; padding-left: 20px; padding-right: 20px; }
     header {
-      position: sticky; top: 0; z-index: 50; backdrop-filter: blur(10px);
-      background: linear-gradient(180deg, rgba(11,16,32,0.9), rgba(11,16,32,0.6));
-      border-bottom: 1px solid var(--border);
-    }
-    .nav { display: flex; align-items: center; justify-content: space-between; height: 64px }
+  position: fixed; /* Fixes the header to the top */
+  top: 0; /* Positions it at the very top of the page */
+  left: 0; /* Aligns it to the left edge */
+  width: 100%; /* Ensures the header spans the full width of the page */
+  z-index: 50; /* Keeps the header above other content */
+  backdrop-filter: blur(10px);
+  background: linear-gradient(180deg, rgba(11,16,32,0.9), rgba(11,16,32,0.6));
+  border-bottom: 1px solid var(--border);
+  padding: 10px 0; /* Adds padding to the header */
+}
+
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 45px }
     .nav a.logo { font-weight: 800; letter-spacing: 0.5px }
     .nav .links { display: flex; gap: 16px }
     .tag { display:inline-flex; align-items:center; gap:8px; padding:6px 10px; padding-bottom: 5px; border:1px solid var(--border); border-radius:999px; background:var(--card); margin-bottom: 20px; }
@@ -264,7 +272,7 @@ html, body {
         <p class="sub">I specialize in building secure systems, integrating security throughout development. My skills cover frontend technologies like React/React Native, backend frameworks such as Flask/Python, and cloud infrastructure. I also conduct phishing simulations with GoPhish and perform penetration testing on web and mobile apps using Kali Linux, Burp Suite, and Frida, ensuring security is embedded in both architecture and functionality.</p>
         <div class="cta">
           <a class="btn primary" href="#projects">See Projects</a>
-          <a class="btn" href="resume.pdf">Download Résumé</a>
+          <a class="btn" href="Sothyro CV.pdf" download>Download Résumé</a>
         </div>
       </div>
       <div class="avatar-wrap">
@@ -348,10 +356,8 @@ html, body {
       <h2>Contact</h2>
       <p class="lead">Want to collaborate or have a question? My inbox is open.</p>
       <div class="list">
-        <a class="pill" href="mailto:you@example.com">you@example.com</a>
-        <a class="pill" href="https://github.com/your-username" target="_blank" rel="noreferrer">GitHub</a>
-        <a class="pill" href="https://www.linkedin.com/in/your-username" target="_blank" rel="noreferrer">LinkedIn</a>
-        <a class="pill" href="https://x.com/your-username" target="_blank" rel="noreferrer">X (Twitter)</a>
+        <a class="pill" href="mailto:meassothyro3@gmail.com">meassothyro3@gmail.com</a>
+        <a class="pill" href="https://kh.linkedin.com/in/sothyro-meas-4b2882232" target="_blank" rel="noreferrer">LinkedIn</a>
       </div>
     </div>
   </section>
@@ -362,7 +368,6 @@ html, body {
       <span>© <span id="y"></span> Sothyro Meas</span>
       <div class="social" aria-label="Social links">
         <a href="#top">Back to top ↑</a>
-        <a href="/feed.xml">RSS</a>
       </div>
     </div>
   </footer>
