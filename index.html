@@ -37,6 +37,14 @@
       --border: rgba(255,255,255,0.08);
       --shadow: 0 10px 30px rgba(0,0,0,0.25);
     }
+    body {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* Ensure no horizontal scroll */
+}
     * { box-sizing: border-box }
     html { scroll-behavior: smooth }
     body {
@@ -93,7 +101,7 @@
 
     @media (max-width: 600px) {
   body {
-    font-size: 8px;
+    font-size: 20px;
     margin-top: -20px; /* Adjust this to raise content */
   }
 
